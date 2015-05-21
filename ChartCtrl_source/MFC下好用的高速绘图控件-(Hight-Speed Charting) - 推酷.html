@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+<!-- saved from url=(0038)http://www.tuicool.com/articles/3eAniu -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta content="authenticity_token" name="csrf-param">
+<meta content="KQBxrjE47L4QdcY8l1FneQ+Js1zRqQTtBIfFIjER5TM=" name="csrf-token">
+    <title>
+            MFC下好用的高速绘图控件-(Hight-Speed Charting) - 推酷
+   </title>
+    <meta name="description" content="MFC下好用的高速绘图控件-(Hight-Speed Charting)">
+    <meta property="qc:admins" content="2040660764645137746375">
+  <link rel="shortcut icon" href="http://static0.tuicool.com/favicon.ico" type="image/x-icon">
+  <link href="./MFC下好用的高速绘图控件-(Hight-Speed Charting) - 推酷_files/application-c4fcbff7eb460b9c6f56f007139f3fa7.css" media="screen" rel="stylesheet" type="text/css">
+  <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+  <script async="" type="text/javascript" src="http://www.gstatic.com/pub-config/ca-pub-7054762349007490.js"></script><script src="./MFC下好用的高速绘图控件-(Hight-Speed Charting) - 推酷_files/application-900d5541f4a7bddb149000d07fda8372.js" type="text/javascript"></script>
+
+  <!--[if IE 7]>
+  <link rel="stylesheet" href="/assets/font-awesome-ie7.min.css">
+  <![endif]--> 
+    <script type="text/javascript" src="./MFC下好用的高速绘图控件-(Hight-Speed Charting) - 推酷_files/tip.js"></script>
+    <!-- <script src="http://www.tuicool.com/assets/tip-9521a713b7f927945b657df78aec9c28.js" type="text/javascript"></script> -->
+  
+  <script type="text/javascript" src="./MFC下好用的高速绘图控件-(Hight-Speed Charting) - 推酷_files/m.js"></script>
+<script type="text/javascript" src="./MFC下好用的高速绘图控件-(Hight-Speed Charting) - 推酷_files/spin.min.js"></script><style type="text/css"></style>
+<link rel="stylesheet" href="http://static0.tuicool.com/assets/github.css">
+
+<script src="./MFC下好用的高速绘图控件-(Hight-Speed Charting) - 推酷_files/share.js"></script><link rel="stylesheet" href="http://bdimg.share.baidu.com/static/api/css/share_style1_24.css"></head>
+<body>
+  
+  <div id="header" class="navbar-fixed-top">
+    <div class="container">
+      <div class="navbar">
+        <div class="navbar-inner">
+          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse"> 
+            <span class="icon-bar"></span> 
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span> 
+          </a>
+          <a href="http://www.tuicool.com/" class="brand">推酷</a>        
+        <nav class="nav-collapse collapse">
+            <ul class="nav navbar primary-nav">                            
+              <li class="active">
+                <a href="http://www.tuicool.com/ah">
+                  文章
+                </a>
+              </li>              
+              <li class="">
+                <a href="http://www.tuicool.com/sites/hot">
+                  站点
+                </a>
+              </li>
+              <li class="">
+                <a href="http://www.tuicool.com/topics">
+                  主题
+                </a>
+              </li>
+              <li class="">
+                <a href="http://course.tuicool.com/">
+                  公开课
+                </a>
+              </li>
+              <li class="">
+                <a href="http://huodong.tuicool.com/">
+                  活动
+                </a>
+              </li>
+              <li class="">
+                <a href="http://www.tuicool.com/mobile">
+                  客户端
+                    <sup style="font-size:0.8em;color: #16A085;">荐</sup>
+                </a>
+              </li>
+              <li class="dropdown">
+                <a href="http://www.tuicool.com/articles/3eAniu#" class="dropdown-toggle" data-toggle="dropdown">周刊 <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="http://www.tuicool.com/mags">编程狂人</a></li>
+                  <li><a href="http://www.tuicool.com/mags/design">设计匠艺</a></li> 
+                  <li><a href="http://www.tuicool.com/articles/weekly">一周拾遗</a></li>                  
+                </ul>
+              </li>
+              
+               <li class="dropdown">
+                <a href="http://www.tuicool.com/articles/3eAniu#" class="dropdown-toggle" data-toggle="dropdown">更多 <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="http://www.tuicool.com/bbs">讨论区</a></li>  
+                  <li><a href="http://www.tuicool.com/about">关于我们</a></li>                 
+                </ul>
+              </li>
+              
+              </ul>
+            <form class="navbar-search pull-left" action="http://www.tuicool.com/search">
+              <input type="text" class="search-query span2" name="kw" placeholder="搜索">
+            </form>
+            <ul class="nav pull-right">
+                <li><a href="http://www.tuicool.com/login">登录</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+  </div>   
+</div>
+  <div id="flash_container" class="noPrint">    
+  </div>
+  
+  <div class="container-fluid">  
+    <div class="row-fluid">
+    <div class="span8 contant article_detail_bg">
+        <h1>MFC下好用的高速绘图控件-(Hight-Speed Charting)</h1>
+        <div class="article_meta">
+            <span class="timestamp">时间&nbsp;2014-01-24 16:07:14
+            </span>
+            <span class="from">
+                <i class="icon-globe"></i>
+                    <a class="cut cut28 from" href="http://www.tuicool.com/sites/vQZRB3" target="_blank">CSDN博客
+                    </a>
+            </span>
+            <span id="dup-cnt"><a href="http://www.tuicool.com/articles/dup?id=3eAniu" target="_blank">相似文章</a> (<i id="dup">0</i>)</span>
+            <span class="source" style="display:block;"><i style="float:left;">原文</i>&nbsp; 
+                <a class="cut cut70" href="http://blog.csdn.net/czyt1988/article/details/8740500" style="display:inline-block;">http://blog.csdn.net/czyt1988/article/details/8740500</a>
+            </span>
+        </div>
+        <div class="article_body" id="nei">
+            <div>
+  <p>
+    <span>也许这是vc下最好最方便的绘图类，它有TeeChart的绘图和操作风格，不用当心注册破解的问题，因为它是开源的。不用打包注册，因为它是封装成类的，能方便扩展继承。vc6.0到vs2010都能使用，而且非常简单。</span>
+  </p>
+  <p>
+    <span>
+      此类发表于      <a target="_blank" href="http://www.codeproject.com/Articles/14075/High-speed-Charting-Control" rel="nofollow,noindex">codeproject</a>
+    </span>
+  </p>
+  <p>
+    <span>在使用它的时候，展示一下它的效果吧：</span>
+  </p>
+  <p>
+    <img src="./MFC下好用的高速绘图控件-(Hight-Speed Charting) - 推酷_files/3e6VBnV.jpg" alt="">
+    <br>
+  </p>
+  <p>
+    <img src="./MFC下好用的高速绘图控件-(Hight-Speed Charting) - 推酷_files/7NJNNb.gif" alt="">
+    <br>
+  </p>
+  <p>
+    <span>如果你想需要上面这些效果的，果断选它吧！</span>
+  </p>
+  <p>
+    <span>下面用图文并茂的方式，来详细介绍这个绘图控件</span>
+  </p>
+  <p>
+    <span>
+      首先，下载这个控件，最新可以从这里获取      <a target="_blank" href="http://www.codeproject.com/Articles/14075/High-speed-Charting-Control" rel="nofollow,noindex">codeproject</a>
+    </span>
+  </p>
+  <h2>1 ChartCtrl类的导入</h2>
+  <p>
+    <span>在工程下建立一个文件夹</span>
+  </p>
+  <p>
+    <span>叫ChartCtrl吧，里面放置ChartCtrl的源代码</span>
+  </p>
+  <p>
+    <img src="./MFC下好用的高速绘图控件-(Hight-Speed Charting) - 推酷_files/7JVZfq.png" alt="">
+    <br>
+  </p>
+  <p>
+    <span>文件夹内容如图所示</span>
+  </p>
+  <p>
+    <img src="./MFC下好用的高速绘图控件-(Hight-Speed Charting) - 推酷_files/7JjQNn.png" alt="">
+    <br>
+  </p>
+  <p>
+    <span>然后让vs导入这些类</span>
+  </p>
+  <img src="./MFC下好用的高速绘图控件-(Hight-Speed Charting) - 推酷_files/va6f6r.jpg" alt="">
+  <br>
+  <div>
+    <span>全选，确定-ok</span>
+  </div>
+  <p>
+    <img src="./MFC下好用的高速绘图控件-(Hight-Speed Charting) - 推酷_files/uArIRf.png" alt="">
+    <br>
+  </p>
+  <p>
+    <span>这时工程就添加好这个控件了</span>
+  </p>
+  <h2>2.创建控件</h2>
+  <h2>2.1 对话框编辑器创建</h2>
+  <span>
+    对于一些不需要改变大小的对话框来说，在对话框编辑器里拖曳创建控件是最舒服的方法了，这个ChartCtrl可以用用户控件来创建    <br>
+    首先在对话框上放置一个Custom Control  </span>
+  <br>
+  <p>
+    <img src="./MFC下好用的高速绘图控件-(Hight-Speed Charting) - 推酷_files/VnqUjq.png" alt="">
+    <br>
+  </p>
+  <p>
+    <span>修改属性如下图所示。这里要改的属性有Style，就在5右边的0改为2,0x52010000,Class命名为ChartCtrl,ID随便改了</span>
+  </p>
+  <img src="./MFC下好用的高速绘图控件-(Hight-Speed Charting) - 推酷_files/neEZjm.png" alt="">
+  <p>
+    <span>给对话框添加变量，和传统的方法一样。这里需要注意的是，由于文件都放置在工程文件的一个文件夹下，包含头文件时需要指明路径</span>
+    <br>
+  </p>
+  <p>
+    <img src="./MFC下好用的高速绘图控件-(Hight-Speed Charting) - 推酷_files/3mENZr.png" alt="">
+    <br>
+  </p>
+  <p>
+    <span>头文件包含的样式如下：</span>
+  </p>
+  <div>
+    <div>
+      <div>
+        <div>
+          <span>
+                      </span>
+          <p>
+            <span>
+              #              <span>
+                <strong>include</strong>
+              </span>
+              <span>"ChartCtrl/ChartCtrl.h"</span>
+            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <span>&nbsp;</span>
+  </div>
+  <p>
+    <span>在对话框类添加变量，叫m_ChartCtrl1（后面还有m_ChartCtrl2通过动态创建的）</span>
+  </p>
+  <div>
+    <span>&nbsp;</span>
+    <p>
+      <span>CChartCtrl m_ChartCtrl2;</span>
+    </p>
+  </div>
+  <div>
+    <span>&nbsp;</span>
+  </div>
+  <p>
+    <span>在DoDataExchange函数里添加关联</span>
+  </p>
+  <div>
+    <p>
+      <span>
+        <span>
+          <strong>void</strong>
+        </span>
+        CSpeedChartCtrlDemoDlg        <span>:</span>
+        <span>:</span>
+        DoDataExchange(CDataExchange        <span>*</span>
+        pDX)&nbsp;        <br>
+        {        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;CDialogEx        <span>:</span>
+        <span>:</span>
+        DoDataExchange(pDX);        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;DDX_Control(pDX, IDC_ChartCtrl1, m_ChartCtrl1);        <br>
+        }      </span>
+    </p>
+  </div>
+  <div>
+    <div>
+      <br>
+      <p>
+        <span>编译运行，绘图控件就出来了</span>
+      </p>
+    </div>
+  </div>
+  <p>
+    <img src="./MFC下好用的高速绘图控件-(Hight-Speed Charting) - 推酷_files/yUbA3y.png" alt="">
+  </p>
+  <h2>2.2 动态创建</h2>
+  <div>
+    <div>
+      <span>添加头文件：</span>
+    </div>
+    <p>
+      <span>同样头文件如下写：</span>
+    </p>
+    <div>
+      <div>
+                <p>
+          #          <span>
+            <strong>include</strong>
+          </span>
+          <span>"ChartCtrl/ChartCtrl.h"</span>
+        </p>
+      </div>
+    </div>
+    <div>
+      <div>
+        <div>
+          <p>
+            <span>然后添加成员变量</span>
+          </p>
+        </div>
+      </div>
+      <div>
+        <div>
+                    <p>CChartCtrl m_ChartCtrl2;</p>
+        </div>
+      </div>
+    </div>
+    <p>
+      <span>在resource.h里添加一个资源</span>
+    </p>
+    <div>
+      <br>
+    </div>
+    <img src="./MFC下好用的高速绘图控件-(Hight-Speed Charting) - 推酷_files/UBNnAb.png" alt="">
+    <br>
+  </div>
+  <p>
+    <span>添加IDC_ChartCtrl2，为1001，注意记得把_APS_NEXT_CONTROL_VALUE改成下一个资源号</span>
+  </p>
+  <span>
+    <br>
+  </span>
+  <p>
+    <span>在OnInitDialog里创建</span>
+  </p>
+  <div>
+    <span>如：</span>
+  </div>
+  <div>
+    <div>
+      <div>
+        <div>
+          <span>
+                      </span>
+          <p>
+            <span>
+              &nbsp; &nbsp; CRect rect,rectChart;&nbsp;              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;GetDlgItem(IDC_ChartCtrl1)              <span>-</span>
+              <span>&gt;</span>
+              GetWindowRect(              <span>&amp;</span>
+              rect);              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;ScreenToClient(rect);              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;rectChart              <span>=</span>
+              rect;              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;rectChart.top              <span>=</span>
+              rect.bottom              <span>+</span>
+              <span>3</span>
+              ;              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;rectChart.bottom              <span>=</span>
+              rectChart.top              <span>+</span>
+              rect.Height();              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;m_ChartCtrl2.Create(              <span>
+                <strong>this</strong>
+              </span>
+              ,rectChart,IDC_ChartCtrl2);              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;m_ChartCtrl2.ShowWindow(SW_SHOWNORMAL);            </span>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <p>
+    <span>这样就可以创建了，下图两个控件分别通过对话框编辑器创建和动态创建，代码在附件下载里</span>
+  </p>
+  <p>
+    <img src="./MFC下好用的高速绘图控件-(Hight-Speed Charting) - 推酷_files/3aMZZj.png" alt="">
+    <br>
+  </p>
+  <p>
+    <span>此时什么也不会显示，需要添加坐标轴</span>
+  </p>
+  <h2>
+    <span>3.创建坐标轴</span>
+  </h2>
+  <div>
+    <div>
+      <span>&nbsp;</span>
+    </div>
+    <p>
+      <span>ChartCtrl一共有3种坐标，都继承于CChartAxis</span>
+    </p>
+  </div>
+  <div>
+    <span>
+      <img src="./MFC下好用的高速绘图控件-(Hight-Speed Charting) - 推酷_files/UvmEZb.png" alt="">
+      <br>
+    </span>
+  </div>
+  <div>
+    <div>
+      <p>头文件ChartCtrl.h已经包含这些坐标，不需要引入</p>
+      <p>
+        下面分别建立两种坐标轴，一个是数值型一个是时间型        <br>
+      </p>
+      <p>在m_ChartCtrl1建立两个都是数值型的坐标</p>
+    </div>
+    <p>在创建m_ChartCtrl1之后加入如下创建坐标轴的代码：（这里写在OnInitDialog里）</p>
+    <div>
+      <div>
+        <div>
+          <span>
+                      </span>
+          <p>
+            <span>
+              &nbsp;&nbsp;&nbsp;&nbsp;CChartAxis              <span>*</span>
+              pAxis              <span>=</span>
+              NULL;&nbsp;              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;pAxis              <span>=</span>
+              m_ChartCtrl1.CreateStandardAxis(CChartCtrl              <span>:</span>
+              <span>:</span>
+              BottomAxis);              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;pAxis              <span>-</span>
+              <span>&gt;</span>
+              SetAutomatic(              <span>
+                <strong>true</strong>
+              </span>
+              );              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;pAxis              <span>=</span>
+              m_ChartCtrl1.CreateStandardAxis(CChartCtrl              <span>:</span>
+              <span>:</span>
+              LeftAxis);              <br>
+              &nbsp;&nbsp;&nbsp;&nbsp;pAxis              <span>-</span>
+              <span>&gt;</span>
+              SetAutomatic(              <span>
+                <strong>true</strong>
+              </span>
+              );            </span>
+          </p>
+          <span>这样就建立两个坐标轴了，如图所示</span>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div>
+    <span>
+      <img src="./MFC下好用的高速绘图控件-(Hight-Speed Charting) - 推酷_files/ue6bIv.png" alt="">
+      <br>
+    </span>
+  </div>
+  <div>
+    <p>给m_ChartCtrl2创建时间坐标</p>
+    <div>
+      <div>
+        <span>
+                  </span>
+        <p>
+          <span>
+            &nbsp;&nbsp;&nbsp;&nbsp;CChartDateTimeAxis            <span>*</span>
+            pDateAxis            <span>=</span>
+            NULL;            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;pDateAxis            <span>=</span>
+            NULL;&nbsp;            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;pDateAxis            <span>=</span>
+            m_ChartCtrl2.CreateDateTimeAxis(CChartCtrl            <span>:</span>
+            <span>:</span>
+            BottomAxis);            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;pDateAxis            <span>-</span>
+            <span>&gt;</span>
+            SetAutomatic(            <span>
+              <strong>true</strong>
+            </span>
+            );            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;pDateAxis            <span>-</span>
+            <span>&gt;</span>
+            SetTickLabelFormat(            <span>
+              <strong>false</strong>
+            </span>
+            ,_T(            <span>"%m月%d日"</span>
+            ));            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;pAxis            <span>=</span>
+            m_ChartCtrl2.CreateStandardAxis(CChartCtrl            <span>:</span>
+            <span>:</span>
+            LeftAxis);            <br>
+            &nbsp;&nbsp;&nbsp;&nbsp;pAxis            <span>-</span>
+            <span>&gt;</span>
+            SetAutomatic(            <span>
+              <strong>true</strong>
+            </span>
+            );          </span>
+        </p>
+        <span>SetTickLabelFormat函数用来设置时间显示方式，格式化和COleDateTime的Format一样</span>
+      </div>
+    </div>
+  </div>
+  <h2>4.创建标题</h2>
+  <p>
+    #    <span>
+      <strong>include</strong>
+    </span>
+    <span>"ChartClass\ChartTitle.h"</span>
+  </p>
+  <span>在添加标题时，先要说说ChartCtrl的字符串，ChartCtrl的字符串实际是stl的string和wstring，为了对应unicode，作者对这两种字符进行了一个宏定义，就像TCHAR一样，定义如下：</span>
+  <br>
+  <p>
+    <span>
+      #      <span>
+        <strong>include</strong>
+      </span>
+      <span>&lt;</span>
+      string      <span>&gt;</span>
+      <br>
+      #      <span>
+        <strong>include</strong>
+      </span>
+      <span>&lt;</span>
+      sstream      <span>&gt;</span>
+      <br>
+      #      <span>
+        <strong>if</strong>
+      </span>
+      <span>
+        <strong>defined</strong>
+      </span>
+      _UNICODE      <span>||</span>
+      <span>
+        <strong>defined</strong>
+      </span>
+      UNICODE      <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;      <span>
+        <strong>typedef</strong>
+      </span>
+      std      <span>:</span>
+      <span>:</span>
+      wstring TChartString;      <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;      <span>
+        <strong>typedef</strong>
+      </span>
+      std      <span>:</span>
+      <span>:</span>
+      wstringstream TChartStringStream;      <br>
+      #      <span>
+        <strong>else</strong>
+      </span>
+      <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;      <span>
+        <strong>typedef</strong>
+      </span>
+      std      <span>:</span>
+      <span>:</span>
+      string TChartString;      <br>
+      &nbsp;&nbsp;&nbsp;&nbsp;      <span>
+        <strong>typedef</strong>
+      </span>
+      std      <span>:</span>
+      <span>:</span>
+      stringstream TChartStringStream;      <br>
+      #      <span>
+        <strong>endif</strong>
+      </span>
+    </span>
+  </p>
+  <p>
+    <span>
+      所以在多字节情况下，就是string。由于MFC大部分都是用CString，CString也是经过宏定义，所以可以比较轻松的和TChartString转换，另外TChartStringStream远比CString的Format灵活和直观，建议大家研究研究！      <br>
+      &nbsp;    </span>
+    <br>
+  </p>
+  <div>
+    <div>
+      <span>加入如下代码：</span>
+    </div>
+  </div>
+  <div>
+    <div>
+      <div>
+                <p>
+          &nbsp;&nbsp;&nbsp;&nbsp;TChartString str1;          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;str1          <span>=</span>
+          _T(          <span>"IDC_ChartCtrl1 - m_ChartCtrl1"</span>
+          );          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;m_ChartCtrl1.GetTitle()          <span>-</span>
+          <span>&gt;</span>
+          AddString(str1);          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;CString str2(_T(          <span>""</span>
+          ));          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;str2          <span>=</span>
+          _T(          <span>"IDC_ChartCtrl2 - m_ChartCtrl2"</span>
+          );          <br>
+          &nbsp;&nbsp;&nbsp;&nbsp;m_ChartCtrl2.GetTitle()          <span>-</span>
+          <span>&gt;</span>
+          AddString(TChartString(str2));        </p>
+      </div>
+    </div>
+  </div>
+  <p>
+    <span>
+      <span>TChartString 可以直接用“=”对字符串赋值</span>
+    </span>
+    <br>
+  </p>
+  <p>
+    <img src="./MFC下好用的高速绘图控件-(Hight-Speed Charting) - 推酷_files/b22Ab2.png" alt="">
+    <br>
+  </p>
+  <p>
+    <span>
+      设置坐标轴的标题，首先需要获取坐标GetLeftAxis，GetBottomAxis ……      <br>
+      获取坐标后，获得坐标的文字标签GetLabel，然后进行修改      <br>
+      如下两种写法，一种比较安全繁琐，一种就直接过去就可以，看个人喜好    </span>
+    <br>
+  </p>
+  <p>
+    CChartAxisLabel    <span>*</span>
+    pLabel    <span>=</span>
+    NULL;    <br>
+    CChartAxis    <span>*</span>
+    pAxis    <span>=</span>
+    NULL;    <br>
+    TChartString str1    <span>=</span>
+    _T(    <span>"左坐标轴"</span>
+    );    <br>
+    CChartAxisLabel    <span>*</span>
+    pLabel    <span>=</span>
+    NULL;    <br>
+    pAxis    <span>=</span>
+    m_ChartCtrl1.GetLeftAxis();    <br>
+    <span>
+      <strong>if</strong>
+    </span>
+    (pAxis)    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;pLabel    <span>=</span>
+    pAxis    <span>-</span>
+    <span>&gt;</span>
+    GetLabel();    <br>
+    <span>
+      <strong>if</strong>
+    </span>
+    (pLabel)    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;pLabel    <span>-</span>
+    <span>&gt;</span>
+    SetText(str1);    <br>
+    m_ChartCtrl2.GetLeftAxis()    <span>-</span>
+    <span>&gt;</span>
+    GetLabel()    <span>-</span>
+    <span>&gt;</span>
+    SetText(str1);    <br>
+    str1    <span>=</span>
+    _T(    <span>"数值坐标轴"</span>
+    );    <br>
+    pAxis    <span>=</span>
+    m_ChartCtrl1.GetBottomAxis();    <br>
+    <span>
+      <strong>if</strong>
+    </span>
+    (pAxis)    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;pLabel    <span>=</span>
+    pAxis    <span>-</span>
+    <span>&gt;</span>
+    GetLabel();    <br>
+    <span>
+      <strong>if</strong>
+    </span>
+    (pLabel)    <br>
+    &nbsp;&nbsp;&nbsp;&nbsp;pLabel    <span>-</span>
+    <span>&gt;</span>
+    SetText(str1);    <br>
+    str1    <span>=</span>
+    _T(    <span>"时间坐标轴"</span>
+    );    <br>
+    m_ChartCtrl2.GetBottomAxis()    <span>-</span>
+    <span>&gt;</span>
+    GetLabel()    <span>-</span>
+    <span>&gt;</span>
+    SetText(str1);  </p>
+  <p>
+    <strong>
+      <span>设置完效果如图</span>
+    </strong>
+  </p>
+  <p>
+    <img src="./MFC下好用的高速绘图控件-(Hight-Speed Charting) - 推酷_files/beU3Qn.png" alt="">
+    <br>
+  </p>
+  <p>
+    <span>标题还可以更改颜色，这里不再重复描述。</span>
+    <br>
+  </p>
+  <h2>5.画图</h2>
+  <h2>5.1 创建线图</h2>
+  <p>ChartCtrl的画线非常简单通用，远比TeeChart简单和方便。</p>
+  <p>创建线图先要创建一个图形系列，这个和TeeChart很像</p>
+  <div>
+    用函数CChartCtrl的CreateLineSerie()函数即可创建一个线图，这个函数会返回这个系列的指针，所有在创建之后记得保存下这个指针，以便之后的操作。线图系列的指针是CChartLineSerie，记得包含头文件    <p>#include "ChartClass\ChartLineSerie.h"</p>
+    <p>创建完序列之后就可以用AddPoints函数把double数组的数据画出来，这个比TeeChart方便多了</p>
+  </div>
+  <p>如下这是画图的函数</p>
+  <div>
+    <div>
+            <p>
+        &nbsp;&nbsp;&nbsp;&nbsp;m_ChartCtrl1.EnableRefresh(        <span>
+          <strong>false</strong>
+        </span>
+        );        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;m_ChartCtrl2.EnableRefresh(        <span>
+          <strong>false</strong>
+        </span>
+        );        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;        <span>//////////////////////////////////////////////////////////////////////////</span>
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;        <span>//画图测试</span>
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;        <span>//////////////////////////////////////////////////////////////////////////</span>
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;        <span>
+          <strong>double</strong>
+        </span>
+        x[        <span>1000</span>
+        ], y[        <span>1000</span>
+        ];        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;        <span>
+          <strong>for</strong>
+        </span>
+        (        <span>
+          <strong>int</strong>
+        </span>
+        i        <span>=</span>
+        <span>0</span>
+        ; i        <span>&lt;</span>
+        <span>1000</span>
+        ; i        <span>++</span>
+        )        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;{        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x[i]        <span>=</span>
+        i;        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y[i]        <span>=</span>
+        sin(        <span>
+          <strong>float</strong>
+        </span>
+        (i));        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;}        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;CChartLineSerie        <span>*</span>
+        pLineSerie1;        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;m_ChartCtrl1.RemoveAllSeries();        <span>//先清空</span>
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;pLineSerie1        <span>=</span>
+        m_ChartCtrl1.CreateLineSerie();        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;pLineSerie1        <span>-</span>
+        <span>&gt;</span>
+        SetSeriesOrdering(poNoOrdering);        <span>//设置为无序</span>
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;pLineSerie1        <span>-</span>
+        <span>&gt;</span>
+        AddPoints(x, y,        <span>1000</span>
+        );        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;pLineSerie1        <span>-</span>
+        <span>&gt;</span>
+        SetName(_T(        <span>"这是IDC_ChartCtrl1的第一条线"</span>
+        ));        <span>//SetName的作用将在后面讲到</span>
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;        <span>//////////////////////////////////////////////////////////////////////////</span>
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;        <span>//时间轴画图</span>
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;        <span>//////////////////////////////////////////////////////////////////////////</span>
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;COleDateTime t1(COleDateTime        <span>:</span>
+        <span>:</span>
+        GetCurrentTime());        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;COleDateTimeSpan tsp(        <span>1</span>
+        ,        <span>0</span>
+        ,        <span>0</span>
+        ,        <span>0</span>
+        );        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;        <span>
+          <strong>for</strong>
+        </span>
+        (        <span>
+          <strong>int</strong>
+        </span>
+        i        <span>=</span>
+        <span>0</span>
+        ; i        <span>&lt;</span>
+        <span>1000</span>
+        ; i        <span>++</span>
+        )        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;{        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;x[i]        <span>=</span>
+        t1.m_dt;        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;y[i]        <span>=</span>
+        sin(        <span>
+          <strong>float</strong>
+        </span>
+        (i));        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;t1        <span>+=</span>
+        tsp;        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;}        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;CChartLineSerie        <span>*</span>
+        pLineSerie2;        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;m_ChartCtrl2.RemoveAllSeries();        <span>//先清空</span>
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;pLineSerie2        <span>=</span>
+        m_ChartCtrl2.CreateLineSerie();        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;pLineSerie2        <span>-</span>
+        <span>&gt;</span>
+        SetSeriesOrdering(poNoOrdering);        <span>//设置为无序</span>
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;pLineSerie2        <span>-</span>
+        <span>&gt;</span>
+        AddPoints(x, y,        <span>1000</span>
+        );        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;pLineSerie2        <span>-</span>
+        <span>&gt;</span>
+        SetName(_T(        <span>"这是IDC_ChartCtrl2的第一条线"</span>
+        ));        <span>//SetName的作用将在后面讲到</span>
+        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;m_ChartCtrl1.EnableRefresh(        <span>
+          <strong>true</strong>
+        </span>
+        );        <br>
+        &nbsp;&nbsp;&nbsp;&nbsp;m_ChartCtrl2.EnableRefresh(        <span>
+          <strong>true</strong>
+        </span>
+        );      </p>
+    </div>
+  </div>
+  <img src="./MFC下好用的高速绘图控件-(Hight-Speed Charting) - 推酷_files/RzmIVv.png" alt="">
+  <br>
+  <p>RemoveAllSeries函数可以清楚所有线条，EnableRefresh函数可以提供绘图效率，另外告诉大家一个bug，时间轴坐标在调第二次用RemoveAllSeries函数后，画图时一定要EnableRefresh(false)再EnableRefresh(true);否则会断言</p>
+  <p>下面将介绍更多的会图方法</p>
+  <p>在上一篇已经介绍了简单的线条绘制，实际上可能需要多的功能</p>
+  <h2>5.2 添加曲线</h2>
+  <p>控件可以绘制不止一条曲线，可以绘制足够多的曲线在上面，下面演示如何添加多个曲线</p>
+  <p>只要在画图时不清楚原来的曲线就会添加多一条曲线</p>
+  <p>把代码的RemoveAllSeries去掉就会添加多条曲线</p>
+  <div>
+    <div>
+            <p>
+        m_ChartCtrl1.EnableRefresh(        <span>
+          <strong>false</strong>
+        </span>
+        );        <br>
+        m_ChartCtrl2.EnableRefresh(        <span>
+          <strong>false</strong>
+        </span>
+        );        <br>
+        <span>//////////////////////////////////////////////////////////////////////////</span>
+        <br>
+        <span>//画图测试</span>
+        <br>
+        <span>//////////////////////////////////////////////////////////////////////////</span>
+        <br>
+        <span>
+          <strong>double</strong>
+        </span>
+        x[        <span>1000</span>
+        ], y[        <span>1000</span>
+        ];        <br>
+        <span>
+          <strong>for</strong>
+        </span>
+        (        <span>
+          <strong>int</strong>
+        </span>
+        i        <span>=</span>
+        <span>0</span>
+        ; i        <span>&lt;</span>
+        <span>1000</span>
+        ; i        <span>++</span>
+        )        <br>
+        {        <br>
+        x[i]        <span>=</span>
+        i;        <br>
+        y[i]        <span>=</span>
+        sin(        <span>
+          <strong>float</strong>
+        </span>
+        (i)        <span>*</span>
+        m_ChartCtrl1.GetSeriesCount());        <br>
+        }        <br>
+        CChartLineSerie        <span>*</span>
+        pLineSerie1;        <br>
+        <span>// m_ChartCtrl1.RemoveAllSeries();//不清空</span>
+        <br>
+        pLineSerie1        <span>=</span>
+        m_ChartCtrl1.CreateLineSerie();        <br>
+        pLineSerie1        <span>-</span>
+        <span>&gt;</span>
+        SetSeriesOrdering(poNoOrdering);        <span>//设置为无序</span>
+        <br>
+        pLineSerie1        <span>-</span>
+        <span>&gt;</span>
+        AddPoints(x, y,        <span>1000</span>
+        );        <br>
+        TChartStringStream strs1;        <br>
+        strs1        <span>&lt;&lt;</span>
+        _T(        <span>"这是IDC_ChartCtrl1的第"</span>
+        )        <br>
+        <span>&lt;&lt;</span>
+        m_ChartCtrl1.GetSeriesCount()        <br>
+        <span>&lt;&lt;</span>
+        _T(        <span>"条曲线"</span>
+        );        <br>
+        pLineSerie1        <span>-</span>
+        <span>&gt;</span>
+        SetName(strs1.str());        <br>
+        <span>//////////////////////////////////////////////////////////////////////////</span>
+        <br>
+        <span>//时间轴画图</span>
+        <br>
+        <span>//////////////////////////////////////////////////////////////////////////</span>
+        <br>
+        COleDateTime t1(COleDateTime        <span>:</span>
+        <span>:</span>
+        GetCurrentTime());        <br>
+        COleDateTimeSpan tsp(        <span>1</span>
+        ,        <span>0</span>
+        ,        <span>0</span>
+        ,        <span>0</span>
+        );        <br>
+        <span>
+          <strong>for</strong>
+        </span>
+        (        <span>
+          <strong>int</strong>
+        </span>
+        i        <span>=</span>
+        <span>0</span>
+        ; i        <span>&lt;</span>
+        <span>1000</span>
+        ; i        <span>++</span>
+        )        <br>
+        {        <br>
+        x[i]        <span>=</span>
+        t1.m_dt;        <br>
+        y[i]        <span>=</span>
+        sin(        <span>
+          <strong>float</strong>
+        </span>
+        (i)        <span>*</span>
+        m_ChartCtrl2.GetSeriesCount());        <br>
+        t1        <span>+=</span>
+        tsp;        <br>
+        }        <br>
+        CChartLineSerie        <span>*</span>
+        pLineSerie2;        <br>
+        <span>// m_ChartCtrl2.RemoveAllSeries();//不清空</span>
+        <br>
+        pLineSerie2        <span>=</span>
+        m_ChartCtrl2.CreateLineSerie();        <br>
+        pLineSerie2        <span>-</span>
+        <span>&gt;</span>
+        SetSeriesOrdering(poNoOrdering);        <span>//设置为无序</span>
+        <br>
+        pLineSerie2        <span>-</span>
+        <span>&gt;</span>
+        AddPoints(x, y,        <span>1000</span>
+        );        <br>
+        TChartStringStream strs2;        <br>
+        strs2        <span>&lt;&lt;</span>
+        _T(        <span>"这是IDC_ChartCtrl2的第"</span>
+        )        <br>
+        <span>&lt;&lt;</span>
+        m_ChartCtrl2.GetSeriesCount()        <br>
+        <span>&lt;&lt;</span>
+        _T(        <span>"条曲线"</span>
+        );        <br>
+        pLineSerie2        <span>-</span>
+        <span>&gt;</span>
+        SetName(strs2.str());        <br>
+        m_ChartCtrl1.EnableRefresh(        <span>
+          <strong>true</strong>
+        </span>
+        );        <br>
+        m_ChartCtrl2.EnableRefresh(        <span>
+          <strong>true</strong>
+        </span>
+        );      </p>
+    </div>
+    <p>这里我添加了n条。</p>
+  </div>
+  <p>
+    <img src="./MFC下好用的高速绘图控件-(Hight-Speed Charting) - 推酷_files/zmQzY3.jpg" alt="">
+    <br>
+  </p>
+  <div>
+    <br>
+  </div>
+  <h2>5.3 动态曲线</h2>
+  <div>
+    <br>
+  </div>
+  <p>
+    <span>
+      以前写TeeChart画图的文章时好多人问怎么动态画图，其实所有画图控件的动态画图都一样，就是不停的画，      <span>动的只是数组，控件只负责画图，你想让图像动起来，就让数据动起来！</span>
+    </span>
+  </p>
+  <p>数据动起来涉及到数组的左右移动，很简单的一个算法而已</p>
+  <p>如有一个double数组 double pdx[100],pdy[100];</p>
+  <p>每次画图时让pdx左移一位</p>
+  <div>
+        <p>
+      <span>
+        <strong>for</strong>
+      </span>
+      (      <span>
+        <strong>int</strong>
+      </span>
+      i(      <span>0</span>
+      );i      <span>&lt;</span>
+      <span>99</span>
+      ;      <span>++</span>
+      i)      <br>
+      {      <br>
+      &nbsp; &nbsp;pdx[i]      <span>=</span>
+      pdx[i      <span>+</span>
+      <span>1</span>
+      ];      <br>
+      &nbsp; &nbsp;pdy[i]      <span>=</span>
+      pdy[i      <span>+</span>
+      <span>1</span>
+      ];      <br>
+      }      <br>
+      pdy[      <span>99</span>
+      ]      <span>=</span>
+      ……需要显示的新数据……    </p>
+  </div>
+  <p>然后每隔0.几秒画出来，就发现动起来了</p>
+  <p>
+    <img src="./MFC下好用的高速绘图控件-(Hight-Speed Charting) - 推酷_files/7NJNNb(1).gif" alt="">
+    <br>
+  </p>
+  <p>
+    ChartCtrl提供了两种绘图函数，AddPoints和AddPoint,这两种函数在绘制动态图时会有所区别，区别见上图，上面的是AddPoints，绘图长度固定，AddPoint效果见下图，图线会不停积累。    <br>
+  </p>
+  <p>
+    <u>这是我在上研究生时写的一篇文章，当时放进草稿箱里一直没发出来，今天无意看到，决定把他完成，demo代码已经找不到了，可能在我以前实验室的电脑里吧~工作后也很少用mfc了，现在偶尔用用qt过把瘾，大家如果对绘图工控有需求的话，可以使用qt的qwt控件，也比较简单，这个控件帮了我很多忙，在此向作者表示感谢，大家可以查看其源代码学习其编程思想。</u>
+  </p>
+  <p>
+    <span>
+      <a target="_blank" href="http://blog.csdn.net/czyt1988/article/details/7428415" rel="nofollow,noindex">VS2010 使用TeeChart绘图控件 - 之一 - 控件和类的导入</a>
+      <br>
+    </span>
+  </p>
+  <p>
+    <span>
+      <strong>
+        <a target="_blank" href="http://blog.csdn.net/czyt1988/article/details/7538979" rel="nofollow,noindex">VS2010 使用TeeChart绘图控件 - 之二 - 绘制图形（折线图，柱状图）</a>
+      </strong>
+      <br>
+    </span>
+  </p>
+  <p>
+    <span>
+      <a target="_blank" href="http://blog.csdn.net/czyt1988/article/details/7428806" rel="nofollow,noindex">TeeChart绘图控件 - 之三 - 提高绘图的效率</a>
+    </span>
+  </p>
+</div>
+
+        </div>
+        <div class="article_social">
+        <div class="article_like">
+                <button class="btn btn-large btn-like" id="my_like2" data_id="3eAniu">
+                    <i class="icon-heart-empty"></i>
+                    赞一个
+                </button>
+                <button class="btn btn-large btn-fav liked" id="my_like" data_id="3eAniu">
+                    <i class="icon-star-empty"></i>
+                    收 藏
+                </button>
+        </div>
+        <div class="bottom_ad huodong-detail-ad-banner clearfix">
+                <script type="text/javascript">
+      var cpro_id = "u1665123";
+    </script>
+    <script src="./MFC下好用的高速绘图控件-(Hight-Speed Charting) - 推酷_files/c.js" type="text/javascript"></script><div id="BAIDU_DUP_wrapper_u1665123_0"><iframe id="cproIframe_u1665123_1" width="580" height="90" src="./MFC下好用的高速绘图控件-(Hight-Speed Charting) - 推酷_files/acom(2).html" align="center,center" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" allowtransparency="true"></iframe></div><script charset="utf-8" src="./MFC下好用的高速绘图控件-(Hight-Speed Charting) - 推酷_files/acom"></script>
+
+        </div>
+        </div>
+           <div id="site_articles">
+              <div class="article-part-title">
+                <span>推荐文章</span>
+              </div>
+          <ul class="side_article_list">
+                <li class="side_article_list_item">
+                    1.<a href="http://www.tuicool.com/articles/aimiaqr" target="_blank" title="关于有符号数和无符号数的转换">
+                    关于有符号数和无符号数的转换
+                </a>
+                </li>
+                <li class="side_article_list_item">
+                    2.<a href="http://www.tuicool.com/articles/VVFfyqe" target="_blank" title="编写跨平台代码之memory alignment">
+                    编写跨平台代码之memory alignment
+                </a>
+                </li>
+                <li class="side_article_list_item">
+                    3.<a href="http://www.tuicool.com/articles/E7zqQzE" target="_blank" title="[原]LeetCode Dungeon Game">
+                    [原]LeetCode Dungeon Game
+                </a>
+                </li>
+                <li class="side_article_list_item">
+                    4.<a href="http://www.tuicool.com/articles/EF3mIvY" target="_blank" title="你好，C++（28）用空间换时间 5.2 内联函数 5.3 重载函数">
+                    你好，C++（28）用空间换时间 5.2 内联函数 5.3 重载函数
+                </a>
+                </li>
+                <li class="side_article_list_item">
+                    5.<a href="http://www.tuicool.com/articles/Rbu2Yn2" target="_blank" title="[原]LeetCode Candy">
+                    [原]LeetCode Candy
+                </a>
+                </li>
+                <li class="side_article_list_item">
+                    6.<a href="http://www.tuicool.com/articles/ZVrmIz" target="_blank" title="C+＋函数模版的简单使用">
+                    C+＋函数模版的简单使用
+                </a>
+                </li>
+         </ul>
+        </div>
+
+        <div id="kan_articles"> <div class="article-part-title"> <span>相关推刊</span></div><ul class="kan-list">          <li class="kan-item">            <a href="http://www.tuicool.com/kans/644961350" target="_blank" class="kan-item-head">              <small>刊主：毛毛毛毛子毛</small>              <img class="kan-cover" src="./MFC下好用的高速绘图控件-(Hight-Speed Charting) - 推酷_files/vmUn2mV.png!kan">            </a>            <span class="kan-detail">              <a href="http://www.tuicool.com/kans/644961350" target="_blank">《默认推刊》</a>              <i class="kan-num">11866</i>            </span>          </li>        </ul><i class="clearfix"></i></div>
+        <div id="article_weibo" style="display:none;"></div>
+        <div class="comments">
+    <div class="comments-area">
+    <div class="comments-header">
+        <h5>我来评几句</h5>
+        <div class="alert comment-alert alert-error" style="display:none;">
+            错误
+        </div>
+            <textarea cols="60" rows="5" id="comment-body" placeholder="请输入评论内容..."></textarea>
+            <span class="btn btn-medium btn-submit" id="comment-submit">登录后评论</span>
+        <p style="margin-top: 5px;margin-left:10px;">
+            已发表评论数(<span class="comment_cnt">0</span>)
+        </p>
+    </div>
+    <div class="comments-list">
+        <div class="empty-cmts alert alert-success" style="display:none;">
+            没有更多评论了^^
+        </div>
+    </div>
+    <div class="more-comments" style="display:none;">
+        <a href="">更多评论</a>
+    </div>
+    <div class="load-fail" style="display: none;">
+        评论加载失败，<a href="javascript:reload_comments('3eAniu',1,0,-1);">重新加载</a>
+    </div>
+    </div>
+</div>
+
+    </div>
+         <div class="span4 article_right_side">
+             <div class="search article_detail_bg">
+                <form class="form-search" action="http://www.tuicool.com/search">
+                    <input name="t" value="1" type="hidden">
+                    <input type="text" class="input-large search-query" name="kw" placeholder="搜索文章">
+                </form>
+             </div>
+            <div class="right_top">
+    <div class="article_related_site article_detail_bg">
+    <h4 class="article-part-title">相关站点</h4>
+    <div class="article_related_site_body clearfix">
+        <div class="logo">
+            <img src="./MFC下好用的高速绘图控件-(Hight-Speed Charting) - 推酷_files/vQZRB3.png">
+        </div>
+        <div class="name">
+            <div>
+                    <a href="http://www.tuicool.com/sites/vQZRB3" target="_blank"> CSDN博客</a>
+            </div>
+            <div>
+                    <input type="button" class="btn btn-success right_site_follow" value="+ 订阅" id="my_follow" data_id="vQZRB3">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="related_topics" class="related_topics2 article_detail_bg">
+    <h4 class="article-part-title">相关主题</h4>
+    <ul class="clearfix">
+        <li>
+            <a href="http://www.tuicool.com/topics/11010015" target="_blank" class="kan-item-head">
+              <small>MFC</small>
+              <img class="kan-cover" src="./MFC下好用的高速绘图控件-(Hight-Speed Charting) - 推酷_files/11010015.png" alt="MFC">
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+
+<div class="right-ad">
+      <script type="text/javascript">BAIDU_CLB_fillSlot("1000377");</script><div id="BAIDU_DUP_wrapper_1000377_0"><iframe id="baidu_clb_slot_iframe_1000377_0" src="./MFC下好用的高速绘图控件-(Hight-Speed Charting) - 推酷_files/MFC下好用的高速绘图控件-(Hight-Speed Charting) - 推酷.html" onload="BAIDU_DUP_CLB_renderFrame(&#39;1000377_0&#39;)" width="300" height="250" vspace="0" hspace="0" allowtransparency="true" scrolling="no" marginwidth="0" marginheight="0" frameborder="0" style="border:0; vertical-align:bottom; margin:0; display:block;"></iframe></div><script charset="utf-8" src="./MFC下好用的高速绘图控件-(Hight-Speed Charting) - 推酷_files/ecom"></script><script charset="utf-8" src="./MFC下好用的高速绘图控件-(Hight-Speed Charting) - 推酷_files/fixed7o.js"></script>
+
+</div>
+<div class="right-ad" style="margin-top: 15px">
+       <script type="text/javascript">
+        var cpro_id = "u1735906";
+      </script>
+      <script src="./MFC下好用的高速绘图控件-(Hight-Speed Charting) - 推酷_files/c.js" type="text/javascript"></script><div id="BAIDU_DUP_wrapper_u1735906_0"><iframe id="cproIframe_u1735906_2" width="300" height="250" src="./MFC下好用的高速绘图控件-(Hight-Speed Charting) - 推酷_files/acom.html" align="center,center" marginwidth="0" marginheight="0" scrolling="no" frameborder="0" allowtransparency="true"></iframe></div><script charset="utf-8" src="./MFC下好用的高速绘图控件-(Hight-Speed Charting) - 推酷_files/acom(1)"></script>
+
+</div>
+<div id="right_site_articles" class="article_detail_bg">
+    <div class="article-part-title">
+        <span>热门文章</span>
+    </div>
+    <ul class="side_article_list">
+        <li class="side_article_list_item">
+            1.<a href="http://www.tuicool.com/articles/VVFfyqe" target="_blank" title="编写跨平台代码之memory alignment"> 编写跨平台代码之memory alignment </a>
+        </li>
+        <li class="side_article_list_item">
+            2.<a href="http://www.tuicool.com/articles/E7zqQzE" target="_blank" title="[原]LeetCode Dungeon Game"> [原]LeetCode Dungeon Game </a>
+        </li>
+        <li class="side_article_list_item">
+            3.<a href="http://www.tuicool.com/articles/EF3mIvY" target="_blank" title="你好，C++（28）用空间换时间 5.2 内联函数 5.3 重载函数"> 你好，C++（28）用空间换时间 5.2 内联函数 5.3 重载函数 </a>
+        </li>
+        <li class="side_article_list_item">
+            4.<a href="http://www.tuicool.com/articles/Rbu2Yn2" target="_blank" title="[原]LeetCode Candy"> [原]LeetCode Candy </a>
+        </li>
+        <li class="side_article_list_item">
+            5.<a href="http://www.tuicool.com/articles/ZVrmIz" target="_blank" title="C+＋函数模版的简单使用"> C+＋函数模版的简单使用 </a>
+        </li>
+        <li class="side_article_list_item">
+            6.<a href="http://www.tuicool.com/articles/ZrQnMf2" target="_blank" title="[原]ART运行时Java堆创建过程分析"> [原]ART运行时Java堆创建过程分析 </a>
+        </li>
+    </ul>
+</div>
+</div>
+
+<div class="operate_zone" style="position: inherit; top: 0px;">
+    <div class="container-body share-body">
+        <div class="article-part-title">
+            <span>分享本文</span>
+        </div>
+        <div class="share_zone">
+    <div class="bdsharebuttonbox bdshare-button-style1-24" data-bd-bind="1421054643168"> 
+         <a href="http://www.tuicool.com/articles/3eAniu#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+        <a href="http://www.tuicool.com/articles/3eAniu#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a>
+        <a href="http://www.tuicool.com/articles/3eAniu#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a>
+        <a href="http://www.tuicool.com/articles/3eAniu#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a>
+        <a href="http://www.tuicool.com/articles/3eAniu#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a>
+        <a href="http://www.tuicool.com/articles/3eAniu#" class="bds_more" data-cmd="more"></a>
+     </div>
+    <script>
+        window._bd_share_config = {
+            "common" : {
+                "bdSnsKey" : {
+                    "tsina" : "3113829255",
+                    "tqq" : "801536792"
+                },
+                "bdText" : "MFC下好用的高速绘图控件-(Hight-Speed Charting) (分享自 @推酷网)",
+                "bdMini" : "2",
+                "bdMiniList" : false,
+                "bdPic" : "http://aimg0.tuicool.com/VnE7vy.jpg",
+                "bdStyle" : "1",
+                "bdSize" : "24"
+            },
+            "share" : {}
+        };
+        with (document)
+        0[(getElementsByTagName('head')[0] || body).appendChild(createElement('script')).src = 'http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion=' + ~(-new Date() / 36e5)];
+    </script>
+</div>
+    </div>
+        <script async="" src="./MFC下好用的高速绘图控件-(Hight-Speed Charting) - 推酷_files/adsbygoogle.js"></script>
+<ins class="adsbygoogle" style="display:inline-block;width:300px;height:250px" data-ad-client="ca-pub-7054762349007490" data-ad-slot="5705695566" data-adsbygoogle-status="done"><ins id="aswift_0_expand" style="display:inline-table;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent"><ins id="aswift_0_anchor" style="display:block;border:none;height:250px;margin:0;padding:0;position:relative;visibility:visible;width:300px;background-color:transparent"><iframe width="300" height="250" frameborder="0" marginwidth="0" marginheight="0" vspace="0" hspace="0" allowtransparency="true" scrolling="no" allowfullscreen="true" onload="var i=this.id,s=window.google_iframe_oncopy,H=s&amp;&amp;s.handlers,h=H&amp;&amp;H[i],w=this.contentWindow,d;try{d=w.document}catch(e){}if(h&amp;&amp;d&amp;&amp;(!d.body||!d.body.firstChild)){if(h.call){setTimeout(h,0)}else if(h.match){try{h=s.upd(h,i)}catch(e){}w.location.replace(h)}}" id="aswift_0" name="aswift_0" style="left:0;position:absolute;top:0;"></iframe></ins></ins></ins>
+<script>
+(adsbygoogle = window.adsbygoogle || []).push({});
+</script>
+
+</div>
+         </div>
+</div>
+
+<div id="myLoginModal" class="modal hide fade">
+    <div class="modal-header">
+        <a class="close" data-dismiss="modal">×</a>
+        <h3>用户登陆</h3>
+    </div>
+    <div class="modal-body">
+        <form method="post" action="http://www.tuicool.com/login" class="form-horizontal" id="login-form">
+            <div class="control-group">
+                <input id="xlEmail" name="email" type="text" placeholder="邮箱">
+            </div>
+            <div class="control-group">
+                <input id="xlPassword" name="password" type="password" placeholder="密码">
+            </div>
+            <div class="control-group">
+                <button type="submit" class="btn btn-primary">
+                    &nbsp;&nbsp;登&nbsp;&nbsp;&nbsp;陆&nbsp;&nbsp;
+                </button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="read-later-alert">
+</div>
+<div>
+   <a href="http://www.tuicool.com/articles/3eAniu#add-article-to-kan" id="add-article-to-kan-btn" class="btn" data-toggle="modal" style="display:none;">添加到推刊</a>
+   <!-- add_article to kan -->
+<div id="add-article-to-kan" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-header">
+    <span class="add-title">收藏到推刊</span>
+    <a href="http://www.tuicool.com/articles/3eAniu#new-kan" class="btn pull-right" data-toggle="modal">创建推刊</a>
+    <i class="clearfix"></i>
+  </div>
+  <div class="modal-body">
+    <ul id="add-kan-list">
+    </ul>
+  </div>
+  <div class="modal-footer">
+    <input type="hidden" value="3eAniu" class="article-id"> 
+    <button class="btn btn-primary pull-left add-to-btn">  收 藏  </button>
+    <button class="btn" data-dismiss="modal" aria-hidden="true">取消</button>
+  </div>
+</div>
+<div class="add-article-to-kan-alert">
+  已收藏到推刊！
+</div>
+
+   <div id="new-kan" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-body">
+    <input type="text" name="name" id="new-kan-name" placeholder="推刊名(必填)" required="" data-validation-required-message="请填写推刊名">
+    <span class="new-ness-name">请填写推刊名</span>
+    <br>
+    <textarea name="desc" id="desc" rows="6" placeholder="推刊描述"></textarea>
+    <span class="new-ness-desc">描述不能大于100个字符!</span>
+    <br>
+    权限设置：<input type="radio" name="type" value="1" checked="checked"> 公开
+    <input type="radio" name="type" value="0"> 仅自己可见
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary pull-left create-kan-btn" disabled="">创建</button>
+    <button class="btn dismiss-new-kan" data-dismiss="modal" aria-hidden="true">取消</button>
+  </div>
+</div>
+
+
+</div>
+<style type="text/css">
+    #dup-cnt {
+        display: none;
+    }
+    .btn-large {
+        padding: 0;
+    }
+    .load-fail {
+        display: none;
+    }
+</style>
+<script src="./MFC下好用的高速绘图控件-(Hight-Speed Charting) - 推酷_files/highlight.pack.js"></script>
+<script type="text/javascript">
+    $('table').each(function(i) {
+        var size = $(this).children().size();
+        if (size > 1) {
+            $(this).attr('class',"table table-bordered");
+        } else if (size == 1) {
+            var e11 = $(this).children(":first");
+            var e1 = e11[0];
+            var name = e1.nodeName.toLowerCase();
+            if ("tbody" == name) {
+                if (e11.children().size() > 1) {
+                     $(this).attr('class',"table table-bordered");
+                }
+            }
+        }
+    });
+        get_weibo_async("3eAniu");
+        related_kan("3eAniu");
+        window.page = 0;
+        window.last = 0;    
+        window.first = true;    
+        resize_article_image('#nei', 550);
+                load_comments("3eAniu",1,0,-1);
+                window.uid = -1;
+        open_add_article_to_kan("false");
+        async_do_like2_article(); 
+        $('pre').each(function(i, e) {
+            hljs.highlightBlock(e, "<span class='indent'>  </span>", false)
+        });
+       
+          
+       handle_follow_site("#my_follow","已订阅","+ 订阅");
+</script>
+
+
+  </div>
+
+    <div class="footer">
+    <div class="footer-inner">
+    <dl class="about-link site-link">
+        <dt>
+            网站相关
+        </dt>
+        <dd>
+            <a target="_blank" href="http://www.tuicool.com/about">关于我们</a>
+        </dd>
+        <dd>
+            <a target="_blank" href="http://www.tuicool.com/mobile">移动应用</a>
+        </dd>
+        <dd>
+            <a target="_blank" href="http://www.tuicool.com/bbs/go/issues">建议反馈</a>
+        </dd>
+    </dl>
+    <dl class="site-link follow-link">
+        <dt>
+            关注我们
+        </dt>
+        <dd>
+            <a target="_blank" href="http://e.weibo.com/tuicool2012"><img src="./MFC下好用的高速绘图控件-(Hight-Speed Charting) - 推酷_files/weibo-32.png">推酷网</a>
+        </dd>
+        <dd><img src="./MFC下好用的高速绘图控件-(Hight-Speed Charting) - 推酷_files/weixin-32.png">tuicool2012
+        </dd>
+        <dd><img src="./MFC下好用的高速绘图控件-(Hight-Speed Charting) - 推酷_files/qun-54.png">QQ群:164644910
+        </dd>
+    </dl>
+    <dl class="site-link links">
+        <dt>
+            友情链接
+        </dt>
+        <dd>
+                <a href="http://www.woshipm.com/" title="人人都是产品经理" target="_blank">人人都是产品经理</a>
+                <a href="http://www.tmtforum.com/" title="TMTForum" target="_blank">TMTForum</a>
+                <a href="http://www.moobuu.com/" title="魔部网" target="_blank">魔部网</a>
+                <a href="http://www.pm265.com/" title="PM256" target="_blank">PM256</a>
+                <a href="http://www.pintu360.com/" title="品途网" target="_blank">品途网</a>
+                <a href="http://www.yidonghua.com/" title="移动信息化" target="_blank">移动信息化</a>
+                <a href="http://www.snsiu.com/" title="行晓网" target="_blank">行晓网</a>
+                <a href="http://code4app.com/" title="Code4App" target="_blank">Code4App</a>
+                <a href="http://www.taskcity.com/" title="智城外包网" target="_blank">智城外包网</a>
+                <a href="http://gkkgo.com/" title="KK学习助手" target="_blank">KK学习助手</a>
+                <a href="http://blog.lamper.cn/" title="LAMP人" target="_blank">LAMP人</a>
+                <a href="http://www.apkway.com/forum.php" title="安卓航班网" target="_blank">安卓航班网</a>
+                <a href="http://www.huxiu.com/" title="虎嗅" target="_blank">虎嗅</a>
+                <a href="http://www.ycpai.com/" title="缘创派" target="_blank">缘创派</a>
+                <a href="http://www.iterduo.com/" title="IT耳朵" target="_blank">IT耳朵</a>
+                <a href="http://www.iresearch.cn/" title="艾瑞网" target="_blank">艾瑞网</a>
+                <a href="http://mediaworks.caixin.com/" title="创媒工场" target="_blank">创媒工场</a>
+                <a href="http://www.guigu.org/" title="硅谷网" target="_blank">硅谷网</a>
+                <a href="https://mos.meituan.com/" title="美团云" target="_blank">美团云</a>
+                <a href="http://www.managershare.com/" title="经理人分享" target="_blank">经理人分享</a>
+                <a href="http://www.shichangbu.com/" title="市场部网" target="_blank">市场部网</a>
+                <a href="http://www.ikanchai.com/" title="砍柴网" target="_blank">砍柴网</a>
+                <a href="http://www.cocoachina.com/" title="CocoaChina" target="_blank">CocoaChina</a>
+                <a href="http://www.ibeifeng.com/" title="北风网" target="_blank">北风网</a>
+                <a href="http://www.jiankongbao.com/" title="云智慧" target="_blank">云智慧</a>
+                <a href="http://www.wyzc.com/" title="我赢职场" target="_blank">我赢职场</a>
+                <a href="http://www.thebigdata.cn/" title="大数据时代" target="_blank">大数据时代</a>
+                <a href="http://www.qidic.com/" title="奇笛网" target="_blank">奇笛网</a>
+                <a href="http://www.cngulu.com/" title="咕噜网" target="_blank">咕噜网</a>
+                <a href="http://www.linuxdiyf.com/" title="红联linux" target="_blank">红联linux</a>
+                <a href="http://win10.ithome.com/" title="Win10之家" target="_blank">Win10之家</a>
+                <a href="http://cn.cocos2d-x.org/" title="Cocos引擎中文官网" target="_blank">Cocos引擎中文官网</a>
+                <a href="http://www.niaogebiji.com/" title="鸟哥笔记" target="_blank">鸟哥笔记</a>
+                <a href="http://www.play.cn/" title="爱游戏" target="_blank">爱游戏</a>
+            <a href="http://www.tuicool.com/links">更多链接&gt;&gt;</a>&nbsp;&nbsp;
+        </dd>
+    </dl>
+    <div class="clear"></div>
+    </div>
+</div>
+
+<div style="display:none;">
+   <script src="./MFC下好用的高速绘图控件-(Hight-Speed Charting) - 推酷_files/stat.php" language="JavaScript"></script><script src="./MFC下好用的高速绘图控件-(Hight-Speed Charting) - 推酷_files/core.php" charset="utf-8" type="text/javascript"></script><a href="http://www.cnzz.com/stat/website.php?web_id=5541078" target="_blank" title="站长统计"><img border="0" hspace="0" vspace="0" src="./MFC下好用的高速绘图控件-(Hight-Speed Charting) - 推酷_files/pic.gif"></a>
+</div>
+
+
+
+
+<div class="return" title="返回顶部" style="display: none;"></div></body></html>

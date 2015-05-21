@@ -1,0 +1,253 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Template|Win32">
+      <Configuration>
+      </Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{104D3BD7-8F18-4933-92C6-F8F86B95C2D4}</ProjectGuid>
+    <RootNamespace>Es</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Static</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <CLRSupport>false</CLRSupport>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\opencv2410\opencv2410_x86_vs2013_release.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\..\..\opencv2410\opencv2410_x86_vs2013_debug.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+    <CodeAnalysisRuleSet Condition="'$(Configuration)|$(Platform)'==' |Win32'">AllRules.ruleset</CodeAnalysisRuleSet>
+    <CodeAnalysisRules Condition="'$(Configuration)|$(Platform)'==' |Win32'" />
+    <CodeAnalysisRuleAssemblies Condition="'$(Configuration)|$(Platform)'==' |Win32'" />
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IncludePath)</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(LibraryPath)</LibraryPath>
+    <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IncludePath)</IncludePath>
+    <LibraryPath Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(LibraryPath)</LibraryPath>
+    <GenerateManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</GenerateManifest>
+    <EmbedManifest Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</EmbedManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <AdditionalIncludeDirectories>learnmatch;learnmatch\3rdparty;learnmatch\3rdparty\brisk\include;learnmatch\3rdparty\brisk\thirdparty\agast\include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0804</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+    </Midl>
+    <ClCompile>
+      <Optimization>Full</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <AdditionalIncludeDirectories>learnmatch\3rdparty\brisk\include;learnmatch\3rdparty\brisk\thirdparty\agast\include;learnmatch\3rdparty;learnmatch;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0804</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateDebugInformation>false</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'==' |Win32'">
+    <Link>
+      <TargetMachine>MachineX64</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="BlockHistMatch.cpp" />
+    <ClCompile Include="ChildFrm.cpp" />
+    <ClCompile Include="DataDef.cpp" />
+    <ClCompile Include="Es.cpp" />
+    <ClCompile Include="EsDoc.cpp" />
+    <ClCompile Include="EsView.cpp" />
+    <ClCompile Include="GraphUtils.cpp" />
+    <ClCompile Include="learnmatch\Config.cpp" />
+    <ClCompile Include="learnmatch\Detector.cpp" />
+    <ClCompile Include="learnmatch\LinearSVM.cpp" />
+    <ClCompile Include="learnmatch\Model.cpp" />
+    <ClCompile Include="learnmatch\RobustHomography.cpp" />
+    <ClCompile Include="learnmatch\Stats.cpp" />
+    <ClCompile Include="learnmatch\Utils.cpp" />
+    <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="MathFunLIB.cpp" />
+    <ClCompile Include="PTTrackLIB.cpp" />
+    <ClCompile Include="ReadRawDlg.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="ConfirmDlg.cpp" />
+    <ClCompile Include="ManualAdjustDlg.cpp" />
+    <ClCompile Include="ProgressDlg.cpp" />
+    <ClCompile Include="SelectTargetDlg.cpp" />
+    <ClCompile Include="SetTarPos.cpp" />
+    <ClCompile Include="TargetNumDlg.cpp" />
+    <ClCompile Include="TargetRectDlg.cpp" />
+    <ClCompile Include="BlockMatchDirSub.cpp" />
+    <ClCompile Include="FileProcess.cpp" />
+    <ClCompile Include="ImageProcess.cpp" />
+    <ClCompile Include="MatchFunc.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BlockHistMatch.h" />
+    <ClInclude Include="ChildFrm.h" />
+    <ClInclude Include="Datadef.h" />
+    <ClInclude Include="Es.h" />
+    <ClInclude Include="EsDoc.h" />
+    <ClInclude Include="EsView.h" />
+    <ClInclude Include="GraphUtils.h" />
+    <ClInclude Include="learnmatch\BinaryDescriptor.h" />
+    <ClInclude Include="learnmatch\BinaryUtils.h" />
+    <ClInclude Include="learnmatch\BinaryWeightVector.h" />
+    <ClInclude Include="learnmatch\Config.h" />
+    <ClInclude Include="learnmatch\Detector.h" />
+    <ClInclude Include="learnmatch\FloatDescriptor.h" />
+    <ClInclude Include="learnmatch\hammingsse.hpp" />
+    <ClInclude Include="learnmatch\LinearSVM.h" />
+    <ClInclude Include="learnmatch\Model.h" />
+    <ClInclude Include="learnmatch\Prosac.h" />
+    <ClInclude Include="learnmatch\Rect.h" />
+    <ClInclude Include="learnmatch\RobustHomography.h" />
+    <ClInclude Include="learnmatch\Stats.h" />
+    <ClInclude Include="learnmatch\Utils.h" />
+    <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="MathFunLIB.h" />
+    <ClInclude Include="PTTrackLIB.h" />
+    <ClInclude Include="ReadRawDlg.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="ConfirmDlg.h" />
+    <ClInclude Include="ManualAdjustDlg.h" />
+    <ClInclude Include="ProgressDlg.h" />
+    <ClInclude Include="SelectTargetDlg.h" />
+    <ClInclude Include="SetTarPos.h" />
+    <ClInclude Include="TargetNumDlg.h" />
+    <ClInclude Include="TargetRectDlg.h" />
+    <ClInclude Include="BlockMatchDirSub.h" />
+    <ClInclude Include="FileProcess.h" />
+    <ClInclude Include="ImageProcess.h" />
+    <ClInclude Include="IncludeFile.h" />
+    <ClInclude Include="MatchFunc.h" />
+    <ClInclude Include="targetver.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="learnmatch\BinaryDescriptor.inl" />
+    <None Include="learnmatch\BinaryUtils.inl" />
+    <None Include="learnmatch\BinaryWeightVector.inl" />
+    <None Include="learnmatch\config.txt" />
+    <None Include="learnmatch\FloatDescriptor.inl" />
+    <None Include="learnmatch\Prosac.inl" />
+    <None Include="res\cur00001.cur" />
+    <None Include="res\cursor2.cur" />
+    <None Include="res\Es.ico" />
+    <None Include="res\Es.rc2" />
+    <None Include="res\EsDoc.ico" />
+    <None Include="res\icon1.ico" />
+    <None Include="res\icon2.ico" />
+    <None Include="res\Toolbar.bmp" />
+    <None Include="res\toolbar1.bmp" />
+    <None Include="res\Toolbar256.bmp" />
+    <None Include="ReadMe.txt" />
+    <None Include="SetTargetPosition.htm">
+      <DeploymentContent>true</DeploymentContent>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Es.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="Es.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

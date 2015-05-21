@@ -1,0 +1,297 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="MyDlg">
+      <UniqueIdentifier>{e5b9740a-a6ac-4b0d-a9a3-a15c7c5e12e7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="MyFuncs">
+      <UniqueIdentifier>{952fc7b2-5719-44f1-b328-168e5428f76a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="learnmatch">
+      <UniqueIdentifier>{4adfa5b5-834b-46d3-bf9d-0281ae6355aa}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="ChildFrm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Es.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EsDoc.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="EsView.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="MainFrm.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stdafx.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ConfirmDlg.cpp">
+      <Filter>MyDlg</Filter>
+    </ClCompile>
+    <ClCompile Include="ManualAdjustDlg.cpp">
+      <Filter>MyDlg</Filter>
+    </ClCompile>
+    <ClCompile Include="ProgressDlg.cpp">
+      <Filter>MyDlg</Filter>
+    </ClCompile>
+    <ClCompile Include="SelectTargetDlg.cpp">
+      <Filter>MyDlg</Filter>
+    </ClCompile>
+    <ClCompile Include="SetTarPos.cpp">
+      <Filter>MyDlg</Filter>
+    </ClCompile>
+    <ClCompile Include="TargetNumDlg.cpp">
+      <Filter>MyDlg</Filter>
+    </ClCompile>
+    <ClCompile Include="TargetRectDlg.cpp">
+      <Filter>MyDlg</Filter>
+    </ClCompile>
+    <ClCompile Include="BlockMatchDirSub.cpp">
+      <Filter>MyFuncs</Filter>
+    </ClCompile>
+    <ClCompile Include="FileProcess.cpp">
+      <Filter>MyFuncs</Filter>
+    </ClCompile>
+    <ClCompile Include="ImageProcess.cpp">
+      <Filter>MyFuncs</Filter>
+    </ClCompile>
+    <ClCompile Include="MatchFunc.cpp">
+      <Filter>MyFuncs</Filter>
+    </ClCompile>
+    <ClCompile Include="BlockHistMatch.cpp">
+      <Filter>MyFuncs</Filter>
+    </ClCompile>
+    <ClCompile Include="ReadRawDlg.cpp">
+      <Filter>MyDlg</Filter>
+    </ClCompile>
+    <ClCompile Include="PTTrackLIB.cpp">
+      <Filter>MyFuncs</Filter>
+    </ClCompile>
+    <ClCompile Include="DataDef.cpp">
+      <Filter>MyFuncs</Filter>
+    </ClCompile>
+    <ClCompile Include="MathFunLIB.cpp">
+      <Filter>MyFuncs</Filter>
+    </ClCompile>
+    <ClCompile Include="learnmatch\Detector.cpp">
+      <Filter>learnmatch</Filter>
+    </ClCompile>
+    <ClCompile Include="learnmatch\LinearSVM.cpp">
+      <Filter>learnmatch</Filter>
+    </ClCompile>
+    <ClCompile Include="learnmatch\Model.cpp">
+      <Filter>learnmatch</Filter>
+    </ClCompile>
+    <ClCompile Include="learnmatch\RobustHomography.cpp">
+      <Filter>learnmatch</Filter>
+    </ClCompile>
+    <ClCompile Include="learnmatch\Stats.cpp">
+      <Filter>learnmatch</Filter>
+    </ClCompile>
+    <ClCompile Include="learnmatch\Utils.cpp">
+      <Filter>learnmatch</Filter>
+    </ClCompile>
+    <ClCompile Include="learnmatch\Config.cpp">
+      <Filter>learnmatch</Filter>
+    </ClCompile>
+    <ClCompile Include="GraphUtils.cpp">
+      <Filter>learnmatch</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ChildFrm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Es.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EsDoc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="EsView.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="MainFrm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Resource.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stdafx.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ConfirmDlg.h">
+      <Filter>MyDlg</Filter>
+    </ClInclude>
+    <ClInclude Include="ManualAdjustDlg.h">
+      <Filter>MyDlg</Filter>
+    </ClInclude>
+    <ClInclude Include="ProgressDlg.h">
+      <Filter>MyDlg</Filter>
+    </ClInclude>
+    <ClInclude Include="SelectTargetDlg.h">
+      <Filter>MyDlg</Filter>
+    </ClInclude>
+    <ClInclude Include="SetTarPos.h">
+      <Filter>MyDlg</Filter>
+    </ClInclude>
+    <ClInclude Include="TargetNumDlg.h">
+      <Filter>MyDlg</Filter>
+    </ClInclude>
+    <ClInclude Include="TargetRectDlg.h">
+      <Filter>MyDlg</Filter>
+    </ClInclude>
+    <ClInclude Include="BlockMatchDirSub.h">
+      <Filter>MyFuncs</Filter>
+    </ClInclude>
+    <ClInclude Include="ImageProcess.h">
+      <Filter>MyFuncs</Filter>
+    </ClInclude>
+    <ClInclude Include="IncludeFile.h">
+      <Filter>MyFuncs</Filter>
+    </ClInclude>
+    <ClInclude Include="MatchFunc.h">
+      <Filter>MyFuncs</Filter>
+    </ClInclude>
+    <ClInclude Include="targetver.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="BlockHistMatch.h">
+      <Filter>MyFuncs</Filter>
+    </ClInclude>
+    <ClInclude Include="ReadRawDlg.h">
+      <Filter>MyDlg</Filter>
+    </ClInclude>
+    <ClInclude Include="PTTrackLIB.h">
+      <Filter>MyFuncs</Filter>
+    </ClInclude>
+    <ClInclude Include="Datadef.h">
+      <Filter>MyFuncs</Filter>
+    </ClInclude>
+    <ClInclude Include="MathFunLIB.h">
+      <Filter>MyFuncs</Filter>
+    </ClInclude>
+    <ClInclude Include="FileProcess.h">
+      <Filter>MyDlg</Filter>
+    </ClInclude>
+    <ClInclude Include="learnmatch\BinaryDescriptor.h">
+      <Filter>learnmatch</Filter>
+    </ClInclude>
+    <ClInclude Include="learnmatch\BinaryUtils.h">
+      <Filter>learnmatch</Filter>
+    </ClInclude>
+    <ClInclude Include="learnmatch\BinaryWeightVector.h">
+      <Filter>learnmatch</Filter>
+    </ClInclude>
+    <ClInclude Include="learnmatch\Detector.h">
+      <Filter>learnmatch</Filter>
+    </ClInclude>
+    <ClInclude Include="learnmatch\FloatDescriptor.h">
+      <Filter>learnmatch</Filter>
+    </ClInclude>
+    <ClInclude Include="learnmatch\hammingsse.hpp">
+      <Filter>learnmatch</Filter>
+    </ClInclude>
+    <ClInclude Include="learnmatch\LinearSVM.h">
+      <Filter>learnmatch</Filter>
+    </ClInclude>
+    <ClInclude Include="learnmatch\Model.h">
+      <Filter>learnmatch</Filter>
+    </ClInclude>
+    <ClInclude Include="learnmatch\Prosac.h">
+      <Filter>learnmatch</Filter>
+    </ClInclude>
+    <ClInclude Include="learnmatch\Rect.h">
+      <Filter>learnmatch</Filter>
+    </ClInclude>
+    <ClInclude Include="learnmatch\RobustHomography.h">
+      <Filter>learnmatch</Filter>
+    </ClInclude>
+    <ClInclude Include="learnmatch\Stats.h">
+      <Filter>learnmatch</Filter>
+    </ClInclude>
+    <ClInclude Include="learnmatch\Utils.h">
+      <Filter>learnmatch</Filter>
+    </ClInclude>
+    <ClInclude Include="learnmatch\Config.h">
+      <Filter>learnmatch</Filter>
+    </ClInclude>
+    <ClInclude Include="GraphUtils.h">
+      <Filter>learnmatch</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\cur00001.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\cursor2.cur">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Es.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Es.rc2">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\EsDoc.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icon1.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\icon2.ico">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Toolbar.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\toolbar1.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="res\Toolbar256.bmp">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="ReadMe.txt" />
+    <None Include="SetTargetPosition.htm" />
+    <None Include="learnmatch\BinaryDescriptor.inl">
+      <Filter>learnmatch</Filter>
+    </None>
+    <None Include="learnmatch\BinaryUtils.inl">
+      <Filter>learnmatch</Filter>
+    </None>
+    <None Include="learnmatch\BinaryWeightVector.inl">
+      <Filter>learnmatch</Filter>
+    </None>
+    <None Include="learnmatch\FloatDescriptor.inl">
+      <Filter>learnmatch</Filter>
+    </None>
+    <None Include="learnmatch\Prosac.inl">
+      <Filter>learnmatch</Filter>
+    </None>
+    <None Include="learnmatch\config.txt">
+      <Filter>learnmatch</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="Es.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+</Project>

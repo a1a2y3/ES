@@ -1,0 +1,699 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(简体，中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#include ""res\\Es.rc2""  // 非 Microsoft Visual C++ 编辑的资源\r\n"
+    "#include ""l.CHS\\afxres.rc""          // 标准组件\r\n"
+    "#include ""l.CHS\\afxprint.rc""        // 打印/打印预览资源\r\n"
+    "#if !defined(_AFXDLL)\r\n"
+    "#include ""l.CHS\\afxribbon.rc""               // MFC ribbon and control bar resources\r\n"
+    "#endif\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\icon2.ico"
+IDR_EsTYPE              ICON                    "res\\EsDoc.ico"
+IDI_ICON1               ICON                    "res\\icon1.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP1             BITMAP                  "res\\Toolbar256.bmp"
+IDR_TOOLBAR1            BITMAP                  "res\\toolbar1.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_TOOLBAR1 TOOLBAR 16, 15
+BEGIN
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_RELOAD_IMAGE
+    BUTTON      ID_ACT_CANCEL
+    BUTTON      ID_GET_PREVIOUS_IMAGE
+    BUTTON      ID_GET_NEXT_IMAGE
+    BUTTON      ID_ZOOM_OUT
+    BUTTON      ID_ZOOM_IN
+    BUTTON      ID_VFLIP
+    BUTTON      ID_HFLIP
+    BUTTON      ID_LEFT90
+    BUTTON      ID_RIGHT90
+    BUTTON      ID_SELECT_POINTS
+    BUTTON      ID_ROTATE_IMAGE
+    BUTTON      ID_TRACK_ONE_IMAGE
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_EsTYPE MENU
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        MENUITEM "打开(&O)...\tCtrl+O",           ID_FILE_OPEN
+        MENUITEM "&关闭",                         ID_FILE_CLOSE
+        MENUITEM "保存(&S)\tCtrl+S",              ID_FILE_SAVE
+        MENUITEM "另存为(&A)...",                  ID_FILE_SAVE_AS
+        MENUITEM SEPARATOR
+        MENUITEM "最近的文件",                       ID_FILE_MRU_FILE1
+        MENUITEM SEPARATOR
+        MENUITEM "退出(&X)",                      ID_APP_EXIT
+    END
+    POPUP "图像处理"
+    BEGIN
+        MENUITEM "滤波",                          ID_IMAGE_FILTER, CHECKED
+        MENUITEM "增强",                          ID_ENHANCE_HIST, CHECKED
+        MENUITEM "反色",                          ID_GRAY_INVERSE, CHECKED
+        MENUITEM SEPARATOR
+        MENUITEM "撤销上一步",                       ID_ACT_CANCEL, CHECKED
+        MENUITEM "重载图像",                        ID_RELOAD_IMAGE, CHECKED
+        MENUITEM SEPARATOR
+        MENUITEM "放大图像",                        ID_ZOOM_IN, CHECKED
+        MENUITEM "缩小图像",                        ID_ZOOM_OUT, CHECKED
+        MENUITEM "图像相似变换",                      ID_ROTATE_IMAGE, CHECKED
+        MENUITEM "前幅图像",                        ID_GET_PREVIOUS_IMAGE, CHECKED
+        MENUITEM "后幅图像",                        ID_GET_NEXT_IMAGE, CHECKED
+    END
+    POPUP "图像匹配"
+    BEGIN
+        MENUITEM "选取目标",                        ID_SELECT_TARGET, CHECKED
+        MENUITEM SEPARATOR
+        MENUITEM "自动匹配评估",                      ID_AUTO_MATCH, CHECKED
+        MENUITEM SEPARATOR
+        MENUITEM "手工匹配评估-选择对应点",                ID_SELECT_POINTS, CHECKED
+        MENUITEM "手工匹配评估-对应点匹配",                ID_MANUAL_POINT_ALIGN, CHECKED
+        MENUITEM SEPARATOR
+        MENUITEM "景象匹配(平移)",                    ID_MULTI_MATCH, CHECKED
+    END
+    POPUP "图像跟踪"
+    BEGIN
+        MENUITEM "手选目标",                        ID_MANUAL_SELECT_TARGET, CHECKED
+        MENUITEM "选取目标角点计算形心",                  32893, CHECKED
+        MENUITEM SEPARATOR
+        MENUITEM "仿射跟踪",                        ID_PT_TRACK, CHECKED
+        MENUITEM SEPARATOR
+        MENUITEM "读入数据（遥测跟踪结果）",                ID_LOAD_TRACK_DATA, CHECKED
+        MENUITEM "序列图像跟踪评估",                    ID_RGSTRACK2, CHECKED
+    END
+    POPUP "窗口(&W)"
+    BEGIN
+        MENUITEM "层叠(&C)",                      ID_WINDOW_CASCADE
+        MENUITEM "平铺(&T)",                      ID_WINDOW_TILE_HORZ
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "关于 Es(&A)...",                ID_APP_ABOUT
+    END
+    POPUP "测试函数"
+    BEGIN
+        MENUITEM "出视场跟踪测试test",                 ID_TEST_TRACK, CHECKED
+        MENUITEM "梯度方向图",                       ID_GRADIENT_ORIENTATION_MAP, CHECKED
+        MENUITEM "梯度强度图",                       ID_GRADIENT_INTENSITY_MAP, CHECKED
+        MENUITEM "金字塔梯度强度图",                    ID_PYRAMID_GRADIENT_INTENSITY_MAP, CHECKED
+        MENUITEM "配准跟踪(sigma)",                 ID_REGISTRATION_TRACK, CHECKED
+    END
+END
+
+IDR_THEME_MENU MENU
+BEGIN
+    MENUITEM "Office 2007 (B&lack Style)",  ID_VIEW_APPLOOK_OFF_2007_BLACK
+    MENUITEM "Office 2007 (&Silver Style)", ID_VIEW_APPLOOK_OFF_2007_SILVER
+    MENUITEM "Office 2007 (&Aqua Style)",   ID_VIEW_APPLOOK_OFF_2007_AQUA
+END
+
+IDR_MAINFRAME1 MENU
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        MENUITEM "打开(&O)...\tCtrl+O",           ID_FILE_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM SEPARATOR
+        MENUITEM "最近的文件",                       ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "退出(&X)",                      ID_APP_EXIT
+    END
+    POPUP "视图(&V)"
+    BEGIN
+        POPUP "&Toolbars and Docking Windows"
+        BEGIN
+            MENUITEM "<placeholder>",               ID_VIEW_TOOLBAR
+        END
+        MENUITEM "状态栏(&S)",                     ID_VIEW_STATUS_BAR
+        POPUP "&Application Look"
+        BEGIN
+            MENUITEM "Windows &2000",               ID_VIEW_APPLOOK_WIN_2000
+            MENUITEM "Office &XP",                  ID_VIEW_APPLOOK_OFF_XP
+            MENUITEM "&Windows XP",                 ID_VIEW_APPLOOK_WIN_XP
+            MENUITEM "Office 200&3",                ID_VIEW_APPLOOK_OFF_2003
+            MENUITEM "Visual Studio.NET 200&5",     ID_VIEW_APPLOOK_VS_2005
+            POPUP "Office 200&7"
+            BEGIN
+                MENUITEM "&Blue Style",                 ID_VIEW_APPLOOK_OFF_2007_BLUE
+                MENUITEM "B&lack Style",                ID_VIEW_APPLOOK_OFF_2007_BLACK
+                MENUITEM "&Silver Style",               ID_VIEW_APPLOOK_OFF_2007_SILVER
+                MENUITEM "&Aqua Style",                 ID_VIEW_APPLOOK_OFF_2007_AQUA
+            END
+        END
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "关于 Es(&A)...",                ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS
+BEGIN
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 131, 63
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    LTEXT           "版本  1.0",IDC_STATIC,21,14,53,8,SS_NOPREFIX
+    LTEXT           "酒泉卫星发射中心 (C) 2015",IDC_STATIC,21,26,91,8
+    DEFPUSHBUTTON   "确定",IDOK,65,40,50,14,WS_GROUP
+END
+
+IDD_DIALOG_MANUAL_ADJUST DIALOGEX 0, 0, 484, 401
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "手动调整图像"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,196,23,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,253,23,50,14
+    LTEXT           "旋转",IDC_STATIC,23,13,19,10
+    LTEXT           "放缩",IDC_STATIC,23,29,24,10
+    CONTROL         "",IDC_OVERVIEW_IMAGE,"Static",SS_BLACKFRAME,30,71,422,311
+    PUSHBUTTON      "预览",IDC_SHOW_RESULT,110,11,32,29
+    EDITTEXT        IDC_EDIT_ROT,48,11,32,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT_SCALE,48,26,32,14,ES_AUTOHSCROLL
+    LTEXT           "度",IDC_STATIC,83,14,12,11
+    LTEXT           "%",IDC_STATIC,84,27,12,11
+END
+
+IDD_CONFIRM_DLG DIALOGEX 0, 0, 241, 103
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "EsConfirm"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,121,81,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,184,81,50,14
+    LTEXT           "EsConfirm",IDC_CONFIRM_STATIC,7,7,227,70
+END
+
+IDD_SET_TARGETNUM DIALOGEX 0, 0, 220, 94
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "选点数目"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,152,44,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,152,64,50,14
+    EDITTEXT        IDC_EDIT1,86,17,44,15,ES_AUTOHSCROLL
+    LTEXT           "设置选点数目：",IDC_STATIC,22,21,61,13
+END
+
+IDD_DIALOG_SELECT_TARGET DIALOGEX 0, 0, 202, 119
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "选取目标"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,129,67,50,14
+    PUSHBUTTON      "取消",IDCANCEL,129,87,50,14
+    CONTROL         "大图中心",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,35,30,48,10
+    CONTROL         "小图中心",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,35,75,48,10
+    CONTROL         "大图手选",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,35,43,48,10
+    CONTROL         "小图手选",IDC_RADIO4,"Button",BS_AUTORADIOBUTTON,35,89,48,10
+    GROUPBOX        "大基准图模式",IDC_STATIC,19,17,92,41
+    GROUPBOX        "小基准图模式",IDC_STATIC,19,63,92,41
+END
+
+IDD_PROCESSING_RATE DIALOGEX 0, 0, 306, 60
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "Static",IDC_STATIC,140,14,19,8
+    CONTROL         "",IDC_PROGRESS1,"msctls_progress32",WS_BORDER,16,27,274,14
+END
+
+IDD_DIALOG_SET_TARGET_POSITION DIALOGEX 0, 0, 228, 81
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "输入目标坐标"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,96,21,39,33
+    PUSHBUTTON      "鼠标选点",IDCANCEL,168,21,41,33
+    EDITTEXT        IDC_EDIT1,49,22,40,14,ES_AUTOHSCROLL
+    EDITTEXT        IDC_EDIT2,49,40,40,14,ES_AUTOHSCROLL
+    LTEXT           "X:",IDC_STATIC,34,25,8,8
+    LTEXT           "Y:",IDC_STATIC,34,43,8,8
+    GROUPBOX        "输入坐标",IDC_STATIC,16,10,124,54
+END
+
+IDD_READRAW DIALOGEX 0, 0, 200, 94
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,121,43,50,14
+    PUSHBUTTON      "取消",IDCANCEL,120,62,50,14
+    EDITTEXT        IDC_EDIT1,59,42,49,14,ES_AUTOHSCROLL
+    LTEXT           "图像宽度：",IDC_STATIC,17,44,41,8
+    EDITTEXT        IDC_EDIT3,59,61,49,14,ES_AUTOHSCROLL
+    LTEXT           "图像高度：",IDC_STATIC,17,63,41,8
+    LTEXT           "EsConfirm",IDC_CONFIRM_STATIC,17,14,155,19
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080403a8"
+        BEGIN
+            VALUE "CompanyName", "TODO: <公司名>"
+            VALUE "FileDescription", "TODO: <文件说明>"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "Es.exe"
+            VALUE "LegalCopyright", "TODO: (C) <公司名>。保留所有权利。"
+            VALUE "OriginalFilename", "Es.exe"
+            VALUE "ProductName", "TODO: <产品名>"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 936
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 124
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 56
+    END
+
+    IDD_DIALOG_MANUAL_ADJUST, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 477
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 394
+    END
+
+    IDD_CONFIRM_DLG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 234
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 96
+    END
+
+    IDD_SET_TARGETNUM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 213
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+
+    IDD_DIALOG_SELECT_TARGET, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 195
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 112
+    END
+
+    IDD_PROCESSING_RATE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 299
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 53
+    END
+
+    IDD_DIALOG_SET_TARGET_POSITION, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 221
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 74
+    END
+
+    IDD_READRAW, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 193
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 87
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Cursor
+//
+
+IDC_CURSOR1             CURSOR                  "res\\cursor2.cur"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDP_OLE_INIT_FAILED     "OLE 初始化失败。请确保 OLE 库是正确的版本。"
+END
+
+STRINGTABLE
+BEGIN
+    IDR_MAINFRAME           "Es"
+    IDR_EsTYPE              "\nEs\nEs\n\n\nEs.Document\nEs.Document"
+    IDS_WINDOWS_MANAGER     "&Windows..."
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_APP_TITLE       "Es"
+    AFX_IDS_IDLEMESSAGE     "就绪"
+END
+
+STRINGTABLE
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_NEW             "创建新文档\n新建"
+    ID_FILE_OPEN            "打开现有文档\n打开"
+    ID_FILE_CLOSE           "关闭活动文档\n关闭"
+    ID_FILE_SAVE            "保存活动文档\n保存"
+    ID_FILE_SAVE_AS         "用新名称保存活动文档\n另存为"
+    ID_FILE_PAGE_SETUP      "更改打印选项\n页面设置"
+    ID_FILE_PRINT_SETUP     "更改打印机选项和打印选项\n打印设置"
+    ID_FILE_PRINT           "打印活动文档\n打印"
+    ID_FILE_PRINT_DIRECT    "Print the active document using current options\nQuick Print"
+    ID_FILE_PRINT_PREVIEW   "显示整页\n打印预览"
+END
+
+STRINGTABLE
+BEGIN
+    ID_APP_ABOUT            "显示程序信息、版本号和版权\n关于"
+    ID_APP_EXIT             "退出应用程序；提示保存文档\n退出"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_MRU_FILE1       "打开此文档"
+    ID_FILE_MRU_FILE2       "打开此文档"
+    ID_FILE_MRU_FILE3       "打开此文档"
+    ID_FILE_MRU_FILE4       "打开此文档"
+    ID_FILE_MRU_FILE5       "打开此文档"
+    ID_FILE_MRU_FILE6       "打开此文档"
+    ID_FILE_MRU_FILE7       "打开此文档"
+    ID_FILE_MRU_FILE8       "打开此文档"
+    ID_FILE_MRU_FILE9       "打开此文档"
+    ID_FILE_MRU_FILE10      "打开此文档"
+    ID_FILE_MRU_FILE11      "打开此文档"
+    ID_FILE_MRU_FILE12      "打开此文档"
+    ID_FILE_MRU_FILE13      "打开此文档"
+    ID_FILE_MRU_FILE14      "打开此文档"
+    ID_FILE_MRU_FILE15      "打开此文档"
+    ID_FILE_MRU_FILE16      "打开此文档"
+END
+
+STRINGTABLE
+BEGIN
+    ID_NEXT_PANE            "切换到下一个窗格\n下一窗格"
+    ID_PREV_PANE            "切换回上一个窗格\n上一窗格"
+END
+
+STRINGTABLE
+BEGIN
+    ID_WINDOW_NEW           "为活动文档打开另一个窗口\n新建窗口"
+    ID_WINDOW_ARRANGE       "在窗口底部排列图标\n排列图标"
+    ID_WINDOW_CASCADE       "以重叠方式排列窗口\n层叠窗口"
+    ID_WINDOW_TILE_HORZ     "以非重叠的平铺方式排列窗口\n平铺窗口"
+    ID_WINDOW_TILE_VERT     "以非重叠的平铺方式排列窗口\n平铺窗口"
+    ID_WINDOW_SPLIT         "将活动窗口拆分为多个窗格\n拆分"
+END
+
+STRINGTABLE
+BEGIN
+    ID_EDIT_CLEAR           "清除选定内容\n清除"
+    ID_EDIT_CLEAR_ALL       "清除全部内容\n全部清除"
+    ID_EDIT_COPY            "复制选定内容并将其放到剪贴板上\n复制"
+    ID_EDIT_CUT             "剪切选定内容并将其放到剪贴板上\n剪切"
+    ID_EDIT_FIND            "查找指定的文本\n查找"
+    ID_EDIT_PASTE           "插入剪贴板内容\n粘贴"
+    ID_EDIT_REPEAT          "重复上一操作\n重复"
+    ID_EDIT_REPLACE         "用其他文本替换特定的文本\n替换"
+    ID_EDIT_SELECT_ALL      "选定整个文档\n全选"
+    ID_EDIT_UNDO            "撤消上一操作\n撤消"
+    ID_EDIT_REDO            "恢复上次撤消的操作\n重做"
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar\nToggle Status Bar"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCSIZE          "更改窗口大小"
+    AFX_IDS_SCMOVE          "更改窗口位置"
+    AFX_IDS_SCMINIMIZE      "将窗口缩小为图标"
+    AFX_IDS_SCMAXIMIZE      "使窗口最大化显示"
+    AFX_IDS_SCNEXTWINDOW    "切换到下一个文档窗口"
+    AFX_IDS_SCPREVWINDOW    "切换到前一个文档窗口"
+    AFX_IDS_SCCLOSE         "关闭活动窗口并提示保存文档"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCRESTORE       "将窗口恢复到正常大小"
+    AFX_IDS_SCTASKLIST      "激活任务列表"
+    AFX_IDS_MDICHILD        "激活此窗口"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "关闭打印预览模式\n取消预览"
+END
+
+STRINGTABLE
+BEGIN
+    IDS_STATUS_PANE1        "Pane 1"
+    IDS_STATUS_PANE2        "Pane 2"
+    IDS_TOOLBAR_STANDARD    "Standard"
+    IDS_TOOLBAR_CUSTOMIZE   "Customize..."
+END
+
+STRINGTABLE
+BEGIN
+    IDS_EDIT_MENU           "Edit"
+END
+
+STRINGTABLE
+BEGIN
+    ID_SELECT_POINTS        "手动选取特征区域中心\n手动选择特征"
+END
+
+#endif    // 中文(简体，中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// 英语(美国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_RIGHTBAR DIALOGEX 0, 0, 133, 115
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 8, "MS Shell Dlg", 400, 0, 0x0
+BEGIN
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_RIGHTBAR, DIALOG
+    BEGIN
+        LEFTMARGIN, 6
+        RIGHTMARGIN, 126
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 108
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+#endif    // 英语(美国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#pragma code_page(936)
+#include "res\Es.rc2"  // 非 Microsoft Visual C++ 编辑的资源
+#include "l.CHS\afxres.rc"          // 标准组件
+#include "l.CHS\afxprint.rc"        // 打印/打印预览资源
+#if !defined(_AFXDLL)
+#include "l.CHS\afxribbon.rc"               // MFC ribbon and control bar resources
+#endif
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
